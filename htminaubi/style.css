@@ -1,0 +1,137 @@
+        @font-face {
+            font-family: 'Moontime';
+            src: url(./fonts/moon-time-regular.ttf);
+        }
+
+        @font-face{
+            font-family: 'ArialMtPro';
+            src: url(./fonts/ARIALMTLIGHT.TTF);
+        }
+        @font-face{
+            font-family: 'ArialMtProBold';
+            src: url(./fonts/ARIALMTEXTRABOLD.TTF);
+        }
+        @font-face{
+            font-family: 'ArialMtProMedium';
+            src: url(./fonts/ARIALMTMEDIUM.TTF);
+        }
+        body {
+            margin: 0px;
+        }
+
+        div {
+            margin: 0px;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .top_bar{
+        /* background-color: #c9edf7; */
+    }
+    /* NAVBAR */
+        .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .navbar-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1600px;
+    }
+
+    .navbar-content .navbar-menu {
+        display: flex;
+        text-align: center;
+        list-style: none;
+    }
+
+    .navbar-content .navbar-menu li a {
+        text-decoration: none;
+        white-space: nowrap;
+        transition: all 0.7 ease;
+    }
+
+    .navbar-toggle {
+        display: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .bar {
+        background-color: black;
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease;
+    }
+
+    @media(max-width: 700px) {
+        .navbar-content{
+            justify-content: end;
+            margin-right: 30px;
+        }
+        .navbar {
+            backdrop-filter: none;
+        }
+
+        .navbar-content .navbar-menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.7rem;
+            margin: 0;
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            top: 0;
+            right: 0;
+            padding: 5rem 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-content .navbar-menu.active {
+            display: flex;
+            
+        }
+
+        .navbar-toggle {
+            display: block;
+            z-index: 999;
+        }
+
+        .navbar-toggle.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .navbar-toggle.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .navbar-toggle.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+
+    }
+
+
+    .pages{
+        padding: 30px;
+        font-weight: 300; 
+        font-family: 'ArialMtProMedium';
+        font-size: 16px;
+    }
+    #inaubi_top_bar {
+        margin: 0;
+        padding: 0;
+        font-family: 'Moontime';
+        font-weight: 100;
+        font-size: 90px;
+    }
